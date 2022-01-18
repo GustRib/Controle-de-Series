@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
 use App\Models\Serie;
+//use App\Serie;
 
 class SeriesController extends Controller
 {
@@ -26,7 +26,7 @@ class SeriesController extends Controller
     public function store(Request $request)
     {
         $nome = $request->nome;
-        $serie = new Serie ();
+        $serie = new Serie();
         $serie->nome = $nome;
         var_dump($serie->save());
 
